@@ -96,6 +96,7 @@ static void cli_print_output(gchar *output) {
     }
 
     printf("%s", output);
+    system("pkill -RTMIN+11 dwmblocks");
     fflush(stdout);
     g_free(last_output);
     last_output = output;
